@@ -10,7 +10,7 @@ public class Cp0033 {
 
     // Main idea: binary search.
     // Time: O(log(n)).
-    // Space: O(log(n)).
+    // Space: O(1).
     public int search(int[] nums, int target) {
         int low = 0;
         int high = nums.length;
