@@ -13,7 +13,7 @@ public class Cp0633 {
         while (left <= right) {
             if (left * left < c - right * right) {
                 left++;
-            } else if (left*left > c-right*right) {
+            } else if (left * left > c - right * right) {
                 right--;
             } else {
                 return true;
