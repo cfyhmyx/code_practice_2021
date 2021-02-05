@@ -18,7 +18,6 @@ public class Cp0282 {
         StringBuilder sb = new StringBuilder();
         helper(res, sb, num.toCharArray(), 0, target, 0, 0);
         return res;
-
     }
 
     public void helper(List<String> res, StringBuilder sb, char[] num, int pos, int target, long prev, long multi) {
