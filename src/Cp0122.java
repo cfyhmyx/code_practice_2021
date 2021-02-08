@@ -8,6 +8,9 @@ public class Cp0122 {
         System.out.println(result);
     }
 
+    // Main idea: dp.
+    // Time: O(n).
+    // Space: O(1).
     public int maxProfit(int[] prices) {
         int T_ik0 = 0, T_ik1 = Integer.MIN_VALUE;
 
