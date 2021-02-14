@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/uncrossed-lines/
+
 public class Cp1035 {
     public static void main(String args[]) {
         Cp1035 cp = new Cp1035();
@@ -7,6 +9,9 @@ public class Cp1035 {
         System.out.println(result);
     }
 
+    // Main idea: dp.
+    // Time: O(m * n).
+    // Space: O(m * n), can be optimized to O(min(m, n)).
     public int maxUncrossedLines(int[] A, int[] B) {
         int m = A.length;
         int n = B.length;
