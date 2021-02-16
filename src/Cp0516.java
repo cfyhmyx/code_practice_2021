@@ -5,6 +5,9 @@ public class Cp0516 {
         System.out.println(result);
     }
 
+    // Main idea: dp.
+    // Time: O(n * n).
+    // Space: O(n * n).
     public int longestPalindromeSubseq(String s) {
         int n = s.length();
         int[][] dp = new int[n+1][n+1];
