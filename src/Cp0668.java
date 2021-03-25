@@ -8,7 +8,7 @@ public class Cp0668 {
     }
 
     // Main idea: binary search.
-    // Time: m*log(n).
+    // Time: m*log(m*n-1).
     // Space: O(1).
     public int findKthNumber(int m, int n, int k) {
         int left = 1;
