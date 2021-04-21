@@ -3,7 +3,7 @@
 public class Cp1248 {
     public static void main(String args[]) {
         Cp1248 cp = new Cp1248();
-        int[] nums = {1, 1, 2, 2, 1};
+        int[] nums = {2, 2, 1, 1, 2};
         int result = cp.numberOfSubarrays(nums, 2);
         System.out.println(result);
     }
