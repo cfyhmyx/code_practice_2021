@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/minimum-distance-to-the-target-element/
 
-public class Cp5746 {
+public class Cp1848 {
     public static void main(String args[]) {
     }
 
