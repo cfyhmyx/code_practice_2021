@@ -6,7 +6,7 @@ public class Cp0987 {
     public static void main(String args[]) {
     }
 
-    // Main idea: bfs.
+    // Main idea: treemap, heap.
     // Time: O(n*log(n)).
     // Space: O(n).
     private Map<Integer, TreeMap<Integer, PriorityQueue<Integer>>> map = new HashMap<>();
