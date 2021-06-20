@@ -6,14 +6,47 @@ public class Cp0410 {
     public static void main(String args[]) {
         Cp0410 cp = new Cp0410();
         int[] nums = {7, 2, 8};
-        double result = cp.splitArray(nums, 2);
+        int result = cp.splitArray(nums, 2);
         System.out.println(result);
+    }
+
+    // Main idea: binary search.
+    // Time: O(n*log(right-left)).
+    // Space: O(1).
+    public int splitArray(int[] nums, int m) {
+        int left = 0;
+        int right = 0;
+        for (int num : nums) {
+            left = Math.max(left, num);
+            right += num;
+        }
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            int group = 1;
+            int curSum = 0;
+            for (int num : nums) {
+                if (curSum + num > mid) {
+                    group++;
+                    curSum = 0;
+                }
+                curSum += num;
+                if (group > m) {
+                    break;
+                }
+            }
+            if (group > m) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        return left;
     }
 
     // Main idea: dp.
     // Time: O(n * n * m).
     // Space: O(n * m).
-    public int splitArray(int[] nums, int m) {
+    /*public int splitArray(int[] nums, int m) {
         int n = nums.length;
         int[][] dp = new int[n + 1][m + 1];
         for (int i = 0; i <= n; i++) {
@@ -30,5 +63,5 @@ public class Cp0410 {
             }
         }
         return dp[n][m];
-    }
+    }*/
 }
