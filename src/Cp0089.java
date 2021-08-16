@@ -5,6 +5,9 @@ import java.util.List;
 
 public class Cp0089 {
     public static void main(String args[]) {
+        Cp0089 cp = new Cp0089();
+        List<Integer> result = cp.grayCode(2);
+        System.out.print(result);
     }
 
     // Main idea: bit, math.
