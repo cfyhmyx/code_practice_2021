@@ -6,7 +6,7 @@ public class Cp1267 {
 
     // Main idea: math.
     // Time: O(n^2).
-    // Space: O(n^2).
+    // Space: O(n).
     public int countServers(int[][] grid) {
         if (grid == null || grid.length == 0 || grid[0].length == 0) return 0;
         int numRows = grid.length;
