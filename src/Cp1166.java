@@ -17,7 +17,7 @@ public class Cp1166 {
         // Main idea: map.
         // Time: O(n).
         // Space: O(n).
-        public boolean create(String path, int value) {
+        public boolean createPath(String path, int value) {
             int idx = path.lastIndexOf("/");
             String parent = path.substring(0, idx);
             if (!file.containsKey(parent)) {
