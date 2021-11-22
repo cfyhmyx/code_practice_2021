@@ -52,4 +52,28 @@ public class Cp1289 {
         }
         return min;
     }
+
+    /*public int minFallingPathSum(int[][] arr) {
+        if (arr == null || arr.length == 0) return 0;
+        int m = arr.length, n = arr[0].length;
+        // fm: first minimum, sm: second minimum.
+        int fm = 0, sm = 0, pos = -1;
+        for (int i = 0; i < m; i++) {
+            int fm2 = Integer.MAX_VALUE, sm2 = Integer.MAX_VALUE, pos2 = -1;
+            for (int j = 0; j < n; j++) {
+                int cur = arr[i][j] + (j == pos ? sm : fm);
+                if (cur < fm2) {
+                    pos2 = j;
+                    sm2 = fm2;
+                    fm2 = cur;
+                } else {
+                    sm2 = Math.min(cur, sm2);
+                }
+            }
+            fm = fm2;
+            sm = sm2;
+            pos = pos2;
+        }
+        return fm;
+    }*/
 }
