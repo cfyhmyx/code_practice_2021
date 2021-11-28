@@ -1,12 +1,19 @@
 // https://leetcode.com/problems/minimum-knight-moves/
 
-import javafx.util.Pair;
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class Cp1197 {
     public static void main(String args[]) {
+    }
+
+    class Pair {
+        int x;
+        int y;
+        Pair(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
     }
 
     // Main idea: dfs, memorization.
