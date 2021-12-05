@@ -5,8 +5,8 @@ public class Cp0926 {
     }
 
     // Main idea: dp, one: the min flips end with 1, zero: the min flips end with 0;
-    // Time: O(n^2).
-    // Space: O(n).
+    // Time: O(n).
+    // Space: O(1).
     public int minFlipsMonoIncr(String s) {
         int zero = 0;
         int one = 0;
