@@ -4,6 +4,10 @@ import java.util.Stack;
 
 public class Cp0907 {
     public static void main(String args[]) {
+        Cp0907 cp = new Cp0907();
+        int[] A = {1,2,3,4};
+        int result = cp.sumSubarrayMins(A);
+        System.out.println(result);
     }
 
     // Main idea: monotone stack
@@ -18,7 +22,7 @@ public class Cp0907 {
             left[i] = i + 1;
             right[i] = len - i;
         }
-        // previous less element
+        // previous less element, (the left num of ele > cur) + 1 (not strict larger)
         for (int i = 0; i < len; i++) {
             while (!stack.isEmpty() && A[stack.peek()] > A[i]) {
                 stack.pop();
@@ -26,7 +30,7 @@ public class Cp0907 {
             left[i] = stack.isEmpty() ? i + 1 : i - stack.peek();
             stack.push(i);
         }
-        //next less element
+        //next less element, (the right num of ele > cur) + 1 (strict larger)
         stack = new Stack<>();
         for (int i = 0; i < len; i++) {
             while (!stack.isEmpty() && A[stack.peek()] > A[i]) {
